@@ -1,0 +1,40 @@
+<div class="filter">
+  <form class="form">
+    <!-- Campo de Input -->
+    <mat-form-field class="form__name">
+      <mat-label>Favorite food</mat-label>
+      <input matInput placeholder="Fulano" value="Victor" />
+    </mat-form-field>
+
+    <!-- Data Picker -->
+    <div class="form__date-picker">
+      <mat-form-field>
+        <mat-label>Data de Cadastro</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Start date" />
+          <input matEndDate placeholder="End date" />
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+
+    <!-- Dropdown -->
+    <div class="form__status">
+      <mat-form-field>
+        <mat-label>Status</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!-- Botão -->
+    <div class="form__button">
+      <button mat-raised-button color="primary">Filtrar</button>
+    </div>
+  </form>
+</div>
