@@ -25,13 +25,13 @@ export const UsersList: IUser[] = [
     },
   },
   {
-    nome: 'Maria Fernandes',
+    nome: 'Maria Fernandes Da Silva',
     email: 'maria.fernandes@example.com',
     senha: 'Maria123',
     idade: 25,
     endereco: {
       rua: 'Avenida do Sol',
-      numero: 100,
+      numero: 0,
       cidade: 'Rio de Janeiro',
       estado: 'RJ',
       pais: 'Brasil',

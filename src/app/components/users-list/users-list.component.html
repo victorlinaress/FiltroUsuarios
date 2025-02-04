@@ -38,7 +38,7 @@
         class="users-list__item"
         (click)="onUserSelectd(element)"
       >
-        {{ element.ativo }}
+        {{ element.ativo | status }}
       </td>
     </ng-container>
 
