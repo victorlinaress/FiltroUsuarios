@@ -9,5 +9,5 @@ import { IUser } from '../../interfaces/user/user.interface';
   styleUrl: './user-details.component.scss',
 })
 export class UserDetailsComponent {
-  @Input ({required: true}) user: IUser = {} as IUser; //o objeto está na tipagem do IUser, cast
+  @Input ({required: true}) user: IUser = {} as IUser;
 }

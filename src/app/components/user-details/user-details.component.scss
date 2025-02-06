@@ -2,10 +2,7 @@
   width: 100%;
   height: 100%;
 
-
   &__item {
-    cursor: pointer;
+    cursor: pointer; // <-- Certifique-se de que há um ponto e vírgula aqui
   }
-
-  
 }

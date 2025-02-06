@@ -2,7 +2,7 @@ import { IUser } from '../interfaces/user/user.interface';
 
 export const UsersList: IUser[] = [
   {
-    nome: 'Vitor Linares',
+    nome: 'Victor Linares da Silva',
     email: 'victorbr8@outlook.com',
     senha: 'senha-segura-123',
     idade: 30,
@@ -25,7 +25,7 @@ export const UsersList: IUser[] = [
     },
   },
   {
-    nome: 'Maria Fernandes Da Silva',
+    nome: 'Maria Fernanda',
     email: 'maria.fernandes@example.com',
     senha: 'Maria123',
     idade: 25,
@@ -39,7 +39,7 @@ export const UsersList: IUser[] = [
     telefone: '21956789101',
     ativo: false,
     funcao: 'Designer',
-    dataCadastro: '2023-08-05T09:00:00.000Z',
+    dataCadastro: '2023-08-01T09:00:00.000Z',
     status: {
       online: false,
       verificado: false,
