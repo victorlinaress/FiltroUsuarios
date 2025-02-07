@@ -11,13 +11,11 @@ import { UsersList } from '../../data/users-list';
 })
 export class UsersListComponent {
   displayedColumns: string[] = ['name', 'date', 'status'];
-  @Input({required: true}) usersList: IUser[] = [];
-
+  @Input({ required: true }) usersList: IUser[] = [];
 
   @Output('userSelected') userSelectedEmitt = new EventEmitter<IUser>();
 
   onUserSelectd(user: IUser) {
-
-    this.userSelectedEmitt.emit(user)
+    this.userSelectedEmitt.emit(user);
   }
 }

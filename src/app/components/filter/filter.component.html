@@ -1,18 +1,17 @@
 <div class="filter">
-  <form class="form">
-    <!-- Campo de Input -->
+  <div class="form">
+    <!-- Campos do formulário -->
     <mat-form-field class="form__name">
-      <mat-label>Favorite food</mat-label>
-      <input matInput placeholder="Fulano" value="Victor" />
+      <mat-label>Nome:</mat-label>
+      <input matInput placeholder="Fulano" [(ngModel)]="filterOptions.name" />
     </mat-form-field>
 
-    <!-- Data Picker -->
     <div class="form__date-picker">
       <mat-form-field>
         <mat-label>Data de Cadastro</mat-label>
         <mat-date-range-input [rangePicker]="picker">
-          <input matStartDate placeholder="Start date" />
-          <input matEndDate placeholder="End date" />
+          <input matStartDate placeholder="Start date" [(ngModel)]="filterOptions.startDate" />
+          <input matEndDate placeholder="End date" [(ngModel)]="filterOptions.endDate" />
         </mat-date-range-input>
         <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
@@ -20,21 +19,20 @@
       </mat-form-field>
     </div>
 
-    <!-- Dropdown -->
     <div class="form__status">
       <mat-form-field>
         <mat-label>Status</mat-label>
-        <mat-select>
-          <mat-option *ngFor="let food of foods" [value]="food.value">
-            {{ food.viewValue }}
+        <mat-select [(ngModel)]="filterOptions.status">
+          <mat-option *ngFor="let status of statusList" [value]="status.value">
+            {{ status.description }}
           </mat-option>
         </mat-select>
       </mat-form-field>
     </div>
 
-    <!-- Botão -->
+    <!-- Botão dentro do formulário -->
     <div class="form__button">
-      <button mat-raised-button color="primary">Filtrar</button>
+      <button mat-raised-button color="primary" (click)="onFilter()">Filtrar</button>
     </div>
-  </form>
+  </div>
 </div>
