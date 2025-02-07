@@ -10,14 +10,16 @@ import { IFilterOptions } from './interfaces/filter-options.interface';
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
-  usersList: IUser[] = [];
+  usersList: IUser[] = []; //lista original
+  userListFiltered: IUser[] = [];
   userSelected: IUser = {} as IUser;
   showUserDetails: boolean = false;
 
   ngOnInit(): void {
     setTimeout(() => {
       this.usersList = UsersList;
-    }, 1);
+      this.userListFiltered = this.usersList;
+    }, 1); //simulaçao da chamada http lista original
   }
 
   onUserSelected(User: IUser) {
@@ -25,5 +27,20 @@ export class AppComponent implements OnInit {
     this.showUserDetails = true;
   }
 
-  onFilter(filterOptions: IFilterOptions) {} //
+  onFilter(filterOptions: IFilterOptions) {  // recebendo o objeto de filtro
+    console.log(filterOptions);
+
+    // executar a lógica de filtro e retornar a lista filtrada
+    this.userListFiltered = this.filterUsersList(filterOptions, this.usersList);
+  }
+
+  filterUsersList(filterOptions: IFilterOptions, usersList: IUser[]): IUser[] {
+    let filteredList: IUser[] = [];
+    filteredList = this.filterUsersListByName(filterOptions.name, usersList);
+    return filteredList;
+  }
+
+  filterUsersListByName(name: string | undefined, usersList: IUser[]): IUser[] {
+    throw new Error('Method not implemented.');
+  }
 }

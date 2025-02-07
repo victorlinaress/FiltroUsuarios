@@ -9,7 +9,7 @@ import { IFilterOptions } from '../../interfaces/filter-options.interface';
   styleUrl: './filter.component.scss',
 })
 export class FilterComponent {
-  filterOptions: IFilterOptions = {//valores do iltro
+  filterOptions: IFilterOptions = {//valores do filtro
     name: undefined,
     startDate: undefined,
     endDate: undefined,
