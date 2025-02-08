@@ -9,9 +9,9 @@ export class StatusPipe implements PipeTransform {
     const INVALID_STATUS = status === undefined || status === null || !status;
 
     if (INVALID_STATUS) {
-      return 'status indisponível';
+      return 'Inativo';
     }
 
-    return status ? 'ativo' : 'inativo';
+    return status ? 'Ativo' : 'Inativo';
   }
 }

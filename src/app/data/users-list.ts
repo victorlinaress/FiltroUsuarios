@@ -5,7 +5,7 @@ export const UsersList: IUser[] = [
     nome: 'Victor Linares da Silva',
     email: 'victorbr8@outlook.com',
     senha: 'senha-segura-123',
-    idade: 30,
+    idade: 20,
     endereco: {
       rua: 'Rua das Flores',
       numero: 42,
